@@ -5,11 +5,11 @@ public:
         int one = 0 ;
         int maxone = -1 ; 
         int n = nums.size() - 1 ; 
-        for(int i = 0 ; i < n; i++){
-            if(nums[i]==1){
-            continue ;
-            }
-        }
+        // for(int i = 0 ; i < n; i++){
+        //     if(nums[i]==1){
+        //     continue ;
+        //     }
+        // }
         if(i==n&&nums[i]==0){
             return 0 ;  
         }
