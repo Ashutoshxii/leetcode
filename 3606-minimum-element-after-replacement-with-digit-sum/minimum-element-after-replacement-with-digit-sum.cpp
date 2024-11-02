@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minElement(vector<int>& nums) {
-        vector<int> sum ; 
+        // vector<int> nums ; 
         for(int i = 0 ; i< nums.size() ; i++){
             int k = 0 ; 
             int m = nums[i] ;
@@ -9,10 +9,13 @@ public:
                 k += m%10 ; 
                 m/=10 ; 
             }
-            sum.push_back(k) ;
+            nums[i] = k ;
 
         }
-        sort(sum.begin(),sum.end()) ;
-        return sum[0] ; 
+        int mini = INT_MAX ;
+        for(int i = 0 ; i < nums.size() ; i++){
+            mini = min(mini,nums[i]) ; 
+        }
+        return mini ; 
     }
 };
