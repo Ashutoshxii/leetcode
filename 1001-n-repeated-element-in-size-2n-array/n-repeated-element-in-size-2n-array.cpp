@@ -7,7 +7,7 @@ public:
             mpp[i]++ ; 
         }
 
-        for(auto pair : mpp){
+        for(auto & pair : mpp){
             if(pair.second==n){
                 return pair.first ; 
             }
