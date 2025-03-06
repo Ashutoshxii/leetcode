@@ -6,10 +6,13 @@ public:
         for(int i = 0 ; i <= n ; i++){
             int count = 0 ; 
             int num = i  ; 
-            while(num>0){
-                if(1&num)count++ ; 
-                num = num >>1 ; 
+            
+            while(num){
+                num &= num-1 ;
+                count++ ; 
             }
+
+
             ans.push_back(count) ;
         }
         return ans ; 
