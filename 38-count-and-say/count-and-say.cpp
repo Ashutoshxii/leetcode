@@ -4,9 +4,9 @@ public:
     string compressor(string k ){
      
         string ans = "" ; 
-        if(k.size()==1){
-            return "1"+k ; 
-        }
+        // if(k.size()==1){
+        //     return "1"+k ; 
+        // }
         int i = 0 ; 
          while(i < k.size()) {
             int count = 1 ;
