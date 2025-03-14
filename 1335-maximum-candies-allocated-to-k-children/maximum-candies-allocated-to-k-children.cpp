@@ -1,15 +1,19 @@
 class Solution {
 public:
     int maximumCandies(vector<int>& candies, long long k) {
-        sort(candies.begin(), candies.end());
+         
         int n = candies.size();
-        int maxi = candies[n - 1];
+        long long  maxi = 0 ; 
+
+        for(int i : candies){
+            maxi+=i ; 
+        }
 
         long long val = 1;
         long long ans = 0;
 
         int left = 1 ; 
-        int right = maxi ; 
+        int right = maxi/k ; 
 
 
         while(left<=right){
