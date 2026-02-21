@@ -14,16 +14,16 @@ public:
     return true;
 }
     int countPrimeSetBits(int left, int right) {
-        int count = 0 ; 
-        for(int i = left ; i <= right ; i++){
-            int counter = 0 ; 
-            int num = i ; 
-            while(num>0){
-                if((num&1)==1)counter++ ;       
-                num = num>>1 ; 
-            }
-            if(isPrime(counter))count++ ;   
+         unordered_set<int> prime = {2,3,5,7,11,13,17,19};
+
+        int count = 0;
+
+        for (int i = left; i <= right; i++) {
+            int bits = __builtin_popcount(i);
+            if (prime.count(bits))
+                count++;
         }
-        return count ; 
+
+        return count;
     }
 };
