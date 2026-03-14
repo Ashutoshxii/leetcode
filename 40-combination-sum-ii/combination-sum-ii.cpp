@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void solve(int ind,vector<int>&can,int t,vector<int>path,vector<vector<int>>&ans){
+    void solve(int ind,vector<int>&can,int t,vector<int>&path,vector<vector<int>>&ans){
         if(t==0)ans.push_back(path) ; 
         if(t<0)return ; 
         for(int i = ind ; i < can.size() ;i++){
